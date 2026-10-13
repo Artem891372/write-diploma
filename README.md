@@ -14,6 +14,8 @@ write-diploma/
 │   ├── dialect.md        # the MD dialect (tables, figures, formulas, sources…)
 │   ├── Humanizer.md      # rules for natural prose (mandatory, anti-AI-clichés)
 │   ├── content.md        # content requirements (structure, length, sections)
+│   ├── safety.md         # optional chapter: safety and environment (БЖД)
+│   ├── economics.md      # optional chapter: economic justification (ТЭО)
 │   ├── profiles.md       # recognized sections and formatting profiles
 │   ├── fstec.md          # example domain: personal-data protection (FSTEC)
 │   └── rules.md          # validator codes and how to fix them

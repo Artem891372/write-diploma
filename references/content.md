@@ -13,10 +13,13 @@ applied in various fields".
 
 **Thesis (ВКР):** Abstract → Contents → Introduction → Normative references →
 Terms and definitions → List of abbreviations → chapters (analysis → design →
-implementation → testing/evaluation) → [optional Economics, Safety and labour
-protection] → Conclusion → References → Appendices.
+implementation → testing/evaluation) → [optional «Экономическое обоснование» —
+`references/economics.md`] → [optional «Безопасность и экологичность» —
+`references/safety.md`] → Conclusion → References → Appendices. The department's
+order and titles win.
 
-**Coursework:** shorter, without mandatory economics/safety chapters.
+**Coursework:** shorter, without mandatory economics/safety chapters unless the
+department requires them.
 
 **Research report (НИР):** the same reference-section skeleton; chapters follow
 the client's plan (analysis, problem statement, methods, precedents), without the

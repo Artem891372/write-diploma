@@ -1,6 +1,6 @@
 ---
 name: write-diploma
-description: Use when the user wants to write a thesis, coursework, or research report (ВКР/курсовая/НИР) in the Markdown dialect of «Оформитель» (GOST 7.32) — build the structure, write it with practical focus, validate it with the bundled validator, and verify that its sources are real.
+description: Use when the user wants to write a thesis, coursework, or research report (ВКР/курсовая/НИР) in the Markdown dialect of «Оформитель» (GOST 7.32) — build the structure, write it with practical focus, validate it with the bundled validator, and verify that its sources are real. Also covers the optional safety (БЖД) and economic justification (ТЭО) chapters.
 ---
 
 # Writing an academic paper in the «Оформитель» dialect
@@ -23,6 +23,12 @@ is not.
 - `references/rules.md` — **validator codes** and how to fix them.
 - `references/content.md` — **content requirements**: structure per paper type,
   section length, terms, calculations, style.
+- `references/safety.md` — optional chapter **«Безопасность и экологичность» (БЖД)**:
+  principles, structure, tables, the individual task. Read it only if the paper
+  includes this chapter.
+- `references/economics.md` — optional chapter **«Экономическое обоснование» (ТЭО)**:
+  four calculation types, formulas, rules for numbers. Read it only if the paper
+  includes this chapter.
 - `references/profiles.md` — recognized sections and formatting profiles.
 - `references/fstec.md` — optional: personal-data protection (FSTEC) — use it only
   for ИБ/ПДн topics.
@@ -34,12 +40,16 @@ is not.
 1. **Inputs** — ask for what is missing: type (thesis/coursework/research), topic,
    domain + practical context (industry, organization, period, whose problem in
    time/money/risk), tech stack, length (pages), optional chapters (economics /
-   safety — for a thesis), title-page data.
+   safety — for a thesis), title-page data. **Ask whether the department has
+   guidelines (методичка)** — required sections, page counts, mandatory tables,
+   formulas, the normative coefficient. If the user has them, ask them to paste the
+   relevant parts: **department guidelines override the defaults in this skill.**
 2. **Plan** — structure by paper type (`references/content.md`) + a source list
    up front, in order of first mention (thesis/research 15–20, coursework 10–15).
 3. **Write in stages** (2–6 stages by length). **First read
-   `references/Humanizer.md` and write by its rules.** Each stage is substantive
-   and practical; every claim is a citation or your own conclusion. Markup rules —
+   `references/Humanizer.md` and write by its rules.** Each optional chapter (БЖД,
+   ТЭО) is its own stage: read `references/safety.md` / `references/economics.md`
+   before writing it. Each stage is substantive and practical; every claim is a citation or your own conclusion. Markup rules —
    `references/dialect.md`; text requirements — `references/content.md`.
 4. **Run the validator.** Save `paper.md` and run the bundled validator:
 
@@ -83,6 +93,13 @@ is not.
 - **Practical focus:** a concrete organization/industry, a real problem, a
   measurable improvement. Not "can be applied in various fields".
 - **Finish the calculation** — do not leave "facts to be collected on site".
+- **Optional chapters tie to the work.** БЖД: what changes in the working conditions
+  after implementation. ТЭО: a priced estimate → effect → numeric coefficient → one
+  clear verdict. Numbers add up everywhere; compute them in code, not in your head.
+- **Never copy illustrative values** from the references (they are placeholders).
+  Real numbers come from the user, a cited source, or a stated assumption.
+- **Changing rates** (insurance contributions, tax scale, tariffs, minimum wage) and
+  **norms** must be verified by search and cited before use.
 
 ## Deliverable
 

@@ -74,8 +74,11 @@ is not.
 6. **Deliver and build.** Default output is `paper.md`. If figures are available,
    deliver `paper.md.zip`: one `.md` at the root, an `assets/` folder with files,
    and `![…](assets/name.png){#fig_…}` in the text (names as in the folder, no
-   hashes, no subfolders). The user opens the file in the «Оформитель» service,
-   picks the GOST 7.32 profile, and builds DOCX/PDF.
+   hashes, no subfolders). **End the final message with the build instruction:**
+   the file must be uploaded to [оформитель.com](https://оформитель.com) (menu
+   «Файл → Открыть» or the cabinet, the `.md.zip` — as an archive), the GOST 7.32
+   profile picked there, and DOCX/PDF built. Always say this when the paper is
+   finished — do not omit it.
 
 ## Critical rules (full list in `references/content.md`)
 
@@ -105,11 +108,14 @@ is not.
 
 Path to `paper.md` (or `paper.md.zip` with `assets/`, if there are figures) +
 validator result (which findings remain and why) + a source report (what was
-confirmed, what was replaced, what needs manual verification).
+confirmed, what was replaced, what needs manual verification). The final message
+always closes with the next step: upload the file to
+[оформитель.com](https://оформитель.com), pick the GOST 7.32 profile, and build
+DOCX/PDF there.
 
 **Two modes, do not mix them.** In this plugin workflow the deliverable is the
-file(s) + the validator result + the source report. The strict "output ONLY the
-document in one four-backtick block" rule in `references/dialect.md` belongs to the
-other mode — when a user pastes the dialect prompt straight into a chat/service and
-wants raw document text back. Do not wrap the plugin deliverable in a four-backtick
-block.
+file(s) + the validator result + the source report + the closing build
+instruction. The strict "output ONLY the document in one four-backtick block"
+rule in `references/dialect.md` belongs to the other mode — when a user pastes
+the dialect prompt straight into a chat/service and wants raw document text back.
+Do not wrap the plugin deliverable in a four-backtick block.
